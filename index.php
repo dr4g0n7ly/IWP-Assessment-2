@@ -1,8 +1,16 @@
 <?php
-require_once "dbconfig.php" ?>
+session_start();
+define("server", "localhost");
+define("user", "root");
+define("password", "");
+define("database", "PROMOSAUCE");
+$con = mysqli_connect(server, user, password, database) or die("connection error");
+echo "<script>alert('Connected to PROMOSAUCE database')</script>)";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>PROMOSAUCE | NFT Market place</title>
@@ -11,6 +19,7 @@ require_once "dbconfig.php" ?>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="header">
 
@@ -35,7 +44,7 @@ require_once "dbconfig.php" ?>
         </div>
 
         <div class="row">
-            
+
             <div class="col text">
                 <h1>Discover, Find, Sell<br>Extraordinary NFTs</h1>
                 <p>marketPlace for all kinds of character<br>collections of Non Fungible Tokens</p>
@@ -47,13 +56,14 @@ require_once "dbconfig.php" ?>
             </div>
 
         </div>
-        
+
     </div>
     <div class="footer">
         <span class="ftext">Nishanth Pilli </span>
-        <span class="ftext" >20BCE0906</span><br>
+        <span class="ftext">20BCE0906</span><br>
         <span class="ftext">IWP ASSESSMENT-2</span>
     </div>
-    
+
 </body>
+
 </html>
